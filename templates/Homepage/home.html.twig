@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="\img/logo.png" height="100" width="100" class="d-inline-block align-top" alt="">
+            Training Centrum Den Haag
+        </a>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <hr>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Trainingen">Trainings aanbod</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/registreren">Lid worden</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Gedrag regels</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Locatie & Contact</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Inloggen</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <div class="gallery">
+    <img src="\img/boxen1.jpg">
+    <img src="\img/boxen2.jpg">
+    <img src="\img/boxen3.jpg">
+    </div>
+
+    <hr>
+
+    <div class="homeText">
+        <h3>Welkom bij Trainings Centrum Den Haag</h3>
+
+        <p>Den Haag Training Centre is een sportschool waar onder professionele begeleiding
+            in een veilige omgeving verschillende soorten marterial arts-, indoor bootcamp
+        personal- en small group trainingen worden aangeboden. Hier kan je je inschrijven
+        op een les op uitschrijven op een les.
+            <br>
+        </p>
+    </div>
+    <hr>
+
+    <
+    <style>
+        .homeText{
+            /*background-color: #5eb5e0;*/
+            /*padding-left: 200px;*/
+            /*padding-right: 200px;*/
+            /*background-color: #5eb5e0;*/
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+
+        h3 {
+            color: #8B0000;
+        }
+
+        p{
+            color: red;
+        }
+
+        .nav-item1{
+            float: left;
+           /*background-color: #5eb5e0;*/
+        }
+
+
+
+    </style>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+        {% block nav %}
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="\img/logo.png" height="100" width="100" class="d-inline-block align-top" alt="">
+                    Training Centrum Den Haag
+                </a>
+            </nav>
+        {% endblock %}
+
+
+        {% block body %}
+            <hr>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Trainingen">Trainings aanbod</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registreren">Lid worden</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gedrag regels</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Locatie & Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ path('app_login') }}">Inloggen</a>
+                </li>
+
+            </ul>
+            <!--
+            <hr>
+
+            <div class="gallery">
+                <img src="\img/boxen1.jpg">
+                <img src="\img/boxen2.jpg">
+                <img src="\img/boxen3.jpg">
+            </div>
+            -->
+            <hr>
+
+            <form method="post">
+
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <div class="container login-container">
+                <div class="login-form-1">
+                    <h3>Inloggen</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email"  id="email" placeholder="Vul Je Email In *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Vul Je Wachtwoord In *" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Login" />
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btnForgetPwd">Wachtwoord Vergeten?</a>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+            <style>
+                .login-container{
+                    margin: auto;
+                    width: 40%;
+                }
+                .login-logo{
+                    position: relative;
+                }
+                .login-logo img{
+                    position: absolute;
+                    width: 20%;
+                    margin-top: 19%;
+                    background: #282726;
+                    border-radius: 4.5rem;
+                    padding: 5%;
+                }
+                .login-form-1{
+                    padding: 9%;
+                    /*background:#282726;*/
+                    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+                }
+                .login-form-1 h3{
+                    text-align: center;
+                    margin-bottom:12%;
+                    color:#8B0000;
+                }
+            </style>
+{% endblock %}

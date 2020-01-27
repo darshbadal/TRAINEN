@@ -1,0 +1,207 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="\img/logo.png" height="100" width="100" class="d-inline-block align-top" alt="">
+            Training Centrum Den Haag
+        </a>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <hr>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Trainingen">Trainings aanbod</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/registreren">Lid worden</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Gedrag regels</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Locatie & Contact</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Inloggen</a>
+        </li>
+
+    </ul>
+<hr>
+
+<div class="gallery">
+    <img src="\img/boxen1.jpg">
+    <img src="\img/boxen2.jpg">
+    <img src="\img/boxen3.jpg">
+</div>
+
+<hr>
+
+<form class="form" method="post">
+    <div class="lid-worden">
+        <h3>Lid worden</h3>
+
+        <p>Om gebruik te maken van de lessen moet je bij ons bekend zijn.<br> Vul hieronder alle gegevens in en registreer jezelf!</p>
+    </div>
+
+    <label for="gegevensMember">Voornaam* </label>
+    <input type="text" class="form-control" id="gegevensMember" name="Voornaam" placeholder="Voornaam">
+
+    <label for="gegevensMember">Tussenvoegsel </label>
+    <input type="text" class="form-control" id="gegevensMember" name="Tussenvoegsel" placeholder="Tussenvoegsel">
+
+    <label for="gegevensMember">Achternaam* </label>
+    <input type="text" class="form-control" id="gegevensMember" name="Achternaam" placeholder="Achternaam">
+
+    <label for="gegevensMember">Geboortedatum* </label>
+    <input type="date" class="form-control" id="gegevensMember" name="Geboortedatum" placeholder="Geboortedatum">
+
+    <label for="gegevensMember">Gebruikersnaam* </label>
+    <input type="text" class="form-control" id="gegevensMember" name="Gebruikersnaam" placeholder="Gebruikersnaam">
+
+    <label for="gegevensMember">Wachtwoord* </label>
+    <input type="password" class="form-control" id="gegevensMember"  name="Voer uw wachtwoord in" placeholder="Voer uw wachtwoord in">
+
+    <label for="gegevensMember">Herhaling Wachtwoord* </label>
+    <input type="password" class="form-control" id="gegevensMember" name="Voer uw wachtwoord opnieuw in" placeholder="Voer uw wachtwoord opnieuw in">
+    <br>
+    <p>Je wachtwoord is nodig om in te loggen, moet minstens 6 tekens bevatten.</p>
+
+    <br>
+
+        <fieldset class="form-group">
+
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Man/Vrouw</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" id="Man" value="Man" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Man
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" id="Vrouw" value="Vrouw">
+                        <label class="form-check-label" for="gridRadios2">
+                            Vrouw
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Straat*</label>
+                <div class="col-sm-10">
+                    <input type="Street" class="form-control" id="inputStreet" placeholder="Straat">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Postcode*</label>
+                <div class="col-sm-10">
+                    <input type="Postcode" class="form-control" id="inputPostcode" placeholder="Postcode">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Stad</label>
+                <div class="col-sm-10">
+                    <input type="Stad" class="form-control" id="inputStad" placeholder="Stad">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+
+        </fieldset>
+        <div class="form-group row"></div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-danger">Sign in</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    <style>
+        .gallery{
+            /*background: #718C00;*/
+            text-align: center;
+        }
+
+        .gallery img{
+            margin: 10px;
+            /*border: 10px solid green;*/
+        }
+
+        label{
+            color: #8B0000;
+        }
+
+        p{
+            font-size: 15px;
+            color: red;
+        }
+
+        legend {
+            color: #8B0000;
+        }
+
+        h3{
+            color: #8B0000;
+        }
+
+        form{
+            height: 1100px;
+            margin: auto;
+            width: 50%;
+        }
+
+        .btn-danger{
+
+        }
+
+        .nav-link:active{
+            color: green;
+        }
+
+        .inloggen{
+            /*background-color: #5eb5e0;*/
+            width: 190px;
+
+        }
+
+        .inlog{
+            margin: 5px;
+        }
+
+        .btn-light {
+
+            float: right;
+            margin-right: 7px;
+        }
+
+        .btn-light:hover{
+            color: #8B0000;
+        }
+
+        .form-check-label {
+            color: dimgrey;
+        }
+
+    </style>
+
+
+    {% endblock %}

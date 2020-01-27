@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="\img/logo.png" height="100" width="100" class="d-inline-block align-top" alt="">
+            Training Centrum Den Haag
+        </a>
+
+
+    </nav>
+{% endblock %}
+
+{% block body %}
+<hr>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Trainingen">Trainings aanbod</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/registreren">Lid worden</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Gedrag regels</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" href="/contact">Locatie & Contact</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Inloggen</a>
+        </li>
+    </ul>
+
+<hr>
+
+<div class="gallery">
+    <img src="\img/boxen1.jpg">
+    <img src="\img/boxen2.jpg">
+    <img src="\img/boxen3.jpg">
+</div>
+
+<hr>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Adress</h5>
+                    <p class="card-text">Vechtstraat 15 <br> 2515 SR Den Haag</p>
+                    <a href="https://www.google.nl/maps/place/Vechtstraat,+2515+SR+Den+Haag/@52.074746,4.321006,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b71f2a78ebe7:0xa8af965d6f6dda3b!8m2!3d52.0747427!4d4.3232"
+                       class="btn btn-danger">Google Maps</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Telefoon Nummer</h5>
+                    <p class="card-text">Tel: 070 695 420 </p>
+                    <a href="#" class="btn btn-danger">Bel nu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .row{
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .card-body h5{
+             color: #8B0000;
+        }
+
+        .card-body p {
+            color: red;
+            height: 40px;
+        }
+
+        .nav-item1{
+            float: left;
+            /*background-color: #5eb5e0;*/
+        }
+
+
+    </style>
+{% endblock %}
